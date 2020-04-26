@@ -1,3 +1,1 @@
-export default class Hand {
-    
-}
+export default class Hand {}

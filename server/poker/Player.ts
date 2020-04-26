@@ -2,17 +2,17 @@ import Card from './Card';
 import Hand from './Hand';
 
 export default class Player {
-  private hand: Card[] = [];
+    private hand: Card[] = [];
 
-  public dealOne(card: Card): void {
-    this.hand.push(card);
-  }
+    public dealOne(card: Card): void {
+        this.hand.push(card);
+    }
 
-  public collectCards(): void {
-    this.hand.splice(0, this.hand.length);
-  }
+    public collectCards(): void {
+        this.hand.splice(0, this.hand.length);
+    }
 
-  public handValue(): Hand {
-    return new Hand();
-  }
+    public handValue(): Hand {
+        return new Hand();
+    }
 }

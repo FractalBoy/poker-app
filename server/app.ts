@@ -14,18 +14,18 @@ const io = socket(server);
 server.listen(process.env.PORT || 8080);
 
 if (process.env.NODE_ENV !== 'production') {
-  webpackConfig.mode = 'development';
-  const compiler = webpack(webpackConfig);
-  app.use(middleware(compiler, { publicPath: '/' }));
+    webpackConfig.mode = 'development';
+    const compiler = webpack(webpackConfig);
+    app.use(middleware(compiler, { publicPath: '/' }));
 } else {
-  webpackConfig.mode = 'production';
-  webpack(webpackConfig, (_error, stats) => {
-    console.log(stats.toString({ colors: true, chunks: false, modules: false}));
-    const outputPath = stats.toJson().outputPath;
-    if (typeof outputPath !== 'undefined') {
-      app.use('/', express.static(outputPath));
-    }
-  });
+    webpackConfig.mode = 'production';
+    webpack(webpackConfig, (_error, stats) => {
+        console.log(stats.toString({ colors: true, chunks: false, modules: false }));
+        const outputPath = stats.toJson().outputPath;
+        if (typeof outputPath !== 'undefined') {
+            app.use('/', express.static(outputPath));
+        }
+    });
 }
 
-io.on('connection', (socket) => {});
+io.on('connection', socket => {});
