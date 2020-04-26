@@ -28,10 +28,4 @@ if (process.env.NODE_ENV !== 'production') {
   });
 }
 
-//app.get('/', (_req, res) => {
-//  res.sendFile(path.resolve(__dirname, '..', 'client', 'index.html'));
-//});
-
-io.on('connection', (socket) => {
-  socket.emit('news', { hello: 'world' });
-});
+io.on('connection', (socket) => {});
