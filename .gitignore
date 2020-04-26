@@ -1,4 +1,6 @@
+.vscode
 .yarn/*
 !.yarn/releases
 !.yarn/plugins
 .pnp.*
+client/dist
