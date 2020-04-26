@@ -1,5 +1,5 @@
 export default class Suit {
-  private readonly symbol: string;
+  readonly #symbol: string;
 
   public static readonly Spades = new Suit('\u2660');
   public static readonly Hearts = new Suit('\u2665');
@@ -7,7 +7,7 @@ export default class Suit {
   public static readonly Clubs = new Suit('\u2663');
 
   private constructor(symbol: string) {
-    this.symbol = symbol;
+    this.#symbol = symbol;
   }
 
   public [Symbol.toPrimitive](hint: string): string | null {
@@ -15,10 +15,10 @@ export default class Suit {
       return null;
     }
     if (hint === 'string') {
-      return this.symbol;
+      return this.#symbol;
     }
 
-    return this.symbol;
+    return this.#symbol;
   }
 
   public static *[Symbol.iterator]() {

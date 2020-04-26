@@ -1,21 +1,21 @@
 class Rank {
-  private readonly number: number;
-  private readonly string: string;
+  readonly #number: number;
+  readonly #string: string;
 
   private constructor(number: number, string: string) {
-    this.number = number;
-    this.string = string;
+    this.#number = number;
+    this.#string = string;
   }
 
   public [Symbol.toPrimitive](hint: string): number | string {
     if (hint === 'number') {
-      return this.number;
+      return this.#number;
     }
     if (hint === 'string') {
-      return this.string;
+      return this.#string;
     }
 
-    return this.number;
+    return this.#number;
   }
 
   public equals(other: Rank): boolean {
