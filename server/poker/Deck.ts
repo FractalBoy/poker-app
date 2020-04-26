@@ -8,7 +8,7 @@ export default class Deck {
   private constructor() {
     this.cards = [];
 
-    for (const suit of Object.values(Suit)) {
+    for (const suit of Suit) {
       for (const rank of Rank) {
         this.cards.push(new Card(rank, suit));
       }

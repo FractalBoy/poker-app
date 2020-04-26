@@ -7,7 +7,7 @@ class Rank {
     this.string = string;
   }
 
-  public [Symbol.toPrimitive] = (hint: string): number | string => {
+  public [Symbol.toPrimitive](hint: string): number | string {
     if (hint === 'number') {
       return this.number;
     }
@@ -16,7 +16,7 @@ class Rank {
     }
 
     return this.number;
-  };
+  }
 
   public equals(other: Rank): boolean {
     if (+this === +other) {
@@ -33,65 +33,20 @@ class Rank {
     return false;
   }
 
-  public toString(): string {
-    return this.string;
-  }
-
-  public static get LowAce(): Rank {
-    return new Rank(1, 'A');
-  }
-
-  public static get Two(): Rank {
-    return new Rank(2, '2');
-  }
-
-  public static get Three(): Rank {
-    return new Rank(3, '3');
-  }
-
-  public static get Four(): Rank {
-    return new Rank(4, '4');
-  }
-
-  public static get Five(): Rank {
-    return new Rank(5, '5');
-  }
-
-  public static get Six(): Rank {
-    return new Rank(6, '6');
-  }
-
-  public static get Seven(): Rank {
-    return new Rank(7, '7');
-  }
-
-  public static get Eight(): Rank {
-    return new Rank(8, '8');
-  }
-
-  public static get Nine(): Rank {
-    return new Rank(9, '9');
-  }
-
-  public static get Ten(): Rank {
-    return new Rank(10, '10');
-  }
-
-  public static get Jack(): Rank {
-    return new Rank(11, 'J');
-  }
-
-  public static get Queen(): Rank {
-    return new Rank(12, 'Q');
-  }
-
-  public static get King(): Rank {
-    return new Rank(13, 'K');
-  }
-
-  public static get Ace(): Rank {
-    return new Rank(14, 'A');
-  }
+  public static LowAce = new Rank(1, 'A');
+  public static Two = new Rank(2, '2');
+  public static Three = new Rank(3, '3');
+  public static Four = new Rank(4, '4');
+  public static Five = new Rank(5, '5');
+  public static Six = new Rank(6, '6');
+  public static Seven = new Rank(7, '7');
+  public static Eight = new Rank(8, '8');
+  public static Nine = new Rank(9, '9');
+  public static Ten = new Rank(10, '10');
+  public static Jack = new Rank(11, 'J');
+  public static Queen = new Rank(12, 'Q');
+  public static King = new Rank(13, 'K');
+  public static Ace = new Rank(14, 'A');
 
   public static *[Symbol.iterator]() {
     yield Rank.Two;
