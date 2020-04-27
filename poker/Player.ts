@@ -1,5 +1,5 @@
 import Card from './Card';
-import Hand from './Hand';
+import Hand from './Hands';
 
 export default class Player {
     private hand: Card[] = [];
@@ -10,9 +10,5 @@ export default class Player {
 
     public collectCards(): void {
         this.hand.splice(0, this.hand.length);
-    }
-
-    public handValue(): Hand {
-        return new Hand();
     }
 }

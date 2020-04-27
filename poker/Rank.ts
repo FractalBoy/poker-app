@@ -1,10 +1,15 @@
 class Rank {
     readonly #number: number;
     readonly #string: string;
+    private static rankMap = new Map(Array.from(Rank).map((r, i) => [i, r]));
 
     private constructor(number: number, string: string) {
         this.#number = number;
         this.#string = string;
+    }
+
+    public static from(rank: number): Rank {
+        return this.rankMap.get(rank) ?? Rank.Invalid;
     }
 
     public [Symbol.toPrimitive](hint: string): number | string {
@@ -30,6 +35,7 @@ class Rank {
         return false;
     }
 
+    public static Invalid = new Rank(0, 'I');
     public static LowAce = new Rank(1, 'A');
     public static Two = new Rank(2, '2');
     public static Three = new Rank(3, '3');

@@ -189,6 +189,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/js-combinatorics@npm:^0.5.31":
+  version: 0.5.31
+  resolution: "@types/js-combinatorics@npm:0.5.31"
+  checksum: 2/8345d84f91954d5392a10c4428fbaa74c0d483cab8c39a7fa886117b1497c45512f5fc0efb0ae25871a483bebcbaa454f00ab79ef0ce1405e3fb40576aeb9f33
+  languageName: node
+  linkType: hard
+
 "@types/keyv@npm:*, @types/keyv@npm:^3.1.1":
   version: 3.1.1
   resolution: "@types/keyv@npm:3.1.1"
@@ -3812,6 +3819,13 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"js-combinatorics@npm:^0.5.5":
+  version: 0.5.5
+  resolution: "js-combinatorics@npm:0.5.5"
+  checksum: 2/e48c0deab96365abaeff780abe28fa6abefab99ce9f819a1e6322707844ab10fc15bbd1965d96e0877bbc43ffb15293b3ac5d863b91b53ed76aa10888b760e0a
+  languageName: node
+  linkType: hard
+
 "js-tokens@npm:^3.0.0 || ^4.0.0, js-tokens@npm:^4.0.0":
   version: 4.0.0
   resolution: "js-tokens@npm:4.0.0"
@@ -5224,6 +5238,7 @@ fsevents@^1.2.7:
   dependencies:
     "@types/clean-webpack-plugin": ^0.1.3
     "@types/express": ^4.17.6
+    "@types/js-combinatorics": ^0.5.31
     "@types/react": ^16.9.34
     "@types/react-dom": ^16.9.6
     "@types/socket.io": ^2.1.4
@@ -5234,6 +5249,7 @@ fsevents@^1.2.7:
     clean-webpack-plugin: ^3.0.0
     express: ^4.17.1
     html-webpack-plugin: ^4.2.0
+    js-combinatorics: ^0.5.5
     pnp-webpack-plugin: ^1.6.4
     prettier: ^2.0.5
     react: ^16.13.1
