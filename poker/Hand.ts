@@ -2,7 +2,7 @@ import Card from './Card';
 import Hands from './Hands';
 
 export default abstract class Hand {
-    protected readonly cards: Card[];
+    public readonly cards: Card[];
     abstract kickers: Card[];
     abstract baseValue: number;
 
