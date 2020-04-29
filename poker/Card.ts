@@ -17,6 +17,10 @@ export default class Card {
         return this._suit;
     }
 
+    public equals(card: Card) {
+        return this.rank == card.rank && this.suit == card.suit;
+    }
+
     public toString = () => `${this.rank}${this.suit}`;
 
     public [Symbol.toStringTag](): string {
