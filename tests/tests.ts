@@ -1,5 +1,4 @@
-///<reference types="should" />
-
+import 'should';
 import { describe } from 'mocha';
 import Hands from '../poker/Hands';
 import Card from '../poker/Card';
