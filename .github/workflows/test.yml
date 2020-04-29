@@ -7,21 +7,23 @@ on:
     branches: [ master ]
     
 jobs:
-  install:
+  test:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+
     - uses: actions/setup-node@v1
       with:
         node-version: 12.16.3
+
     - name: Run yarn install
       run: yarn
-  test:
+
     - name: Run tests
       run: yarn test
-  lint:
+
     - name: Run TSLint
       run: yarn lint
-  prettier:
+
     - name: Check prettier
       run: yarn prettier
