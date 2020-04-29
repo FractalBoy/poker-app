@@ -18,7 +18,7 @@ export default class Card {
     }
 
     public equals(card: Card) {
-        return this.rank == card.rank && this.suit == card.suit;
+        return this.rank === card.rank && this.suit === card.suit;
     }
 
     public toString = () => `${this.rank}${this.suit}`;

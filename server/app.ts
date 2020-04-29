@@ -20,6 +20,7 @@ if (process.env.NODE_ENV !== 'production') {
 } else {
     webpackConfig.mode = 'production';
     webpack(webpackConfig, (_error, stats) => {
+        /* tslint:disable-next-line:no-console */
         console.log(stats.toString({ colors: true, chunks: false, modules: false }));
         const outputPath = stats.toJson().outputPath;
         if (typeof outputPath !== 'undefined') {
@@ -28,4 +29,6 @@ if (process.env.NODE_ENV !== 'production') {
     });
 }
 
-io.on('connection', socket => {});
+io.on('connection', sock => {
+    return;
+});

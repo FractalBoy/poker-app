@@ -1,3 +1,5 @@
+/* tslint:disable:only-arrow-functions */
+
 import 'should';
 import { describe } from 'mocha';
 import Hands from '../poker/Hands';

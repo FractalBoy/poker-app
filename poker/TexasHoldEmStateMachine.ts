@@ -29,16 +29,36 @@ export default class TexasHoldEmStateMachine implements IPokerStateMachine {
             this.table.seatPlayer(new Player());
             this.state = TexasHoldEmState.DealingPocketCards;
         },
-        DealingPocketCards: () => {},
-        PreFlopBetting: () => {},
-        DealingFlop: () => {},
-        PostFlopBetting: () => {},
-        DealingTurn: () => {},
-        PostTurnBetting: () => {},
-        DealingRiver: () => {},
-        PostRiverBetting: () => {},
-        SelectingWinner: () => {},
-        CollectingCards: () => {}
+        DealingPocketCards: () => {
+            return;
+        },
+        PreFlopBetting: () => {
+            return;
+        },
+        DealingFlop: () => {
+            return;
+        },
+        PostFlopBetting: () => {
+            return;
+        },
+        DealingTurn: () => {
+            return;
+        },
+        PostTurnBetting: () => {
+            return;
+        },
+        DealingRiver: () => {
+            return;
+        },
+        PostRiverBetting: () => {
+            return;
+        },
+        SelectingWinner: () => {
+            return;
+        },
+        CollectingCards: () => {
+            return;
+        }
     };
 
     constructor(table: Table) {

@@ -3,9 +3,9 @@ class Rank {
     readonly #string: string;
     private static rankMap = new Map(Array.from(Rank).map((r, i) => [i, r]));
 
-    private constructor(number: number, string: string) {
-        this.#number = number;
-        this.#string = string;
+    private constructor(num: number, str: string) {
+        this.#number = num;
+        this.#string = str;
     }
 
     public static from(rank: number): Rank {
