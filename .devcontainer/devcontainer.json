@@ -1,0 +1,17 @@
+{
+    "name": "Node.js & TypeScript",
+    "image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm",
+    "features": {
+        "ghcr.io/devcontainers/features/git": "os-provided"
+    },
+    "workspaceMount": "",
+    "remoteUser": "node",
+    "containerEnv": {
+        "HOME": "/home/node"
+    },
+    "runArgs": [
+        "--userns=keep-id",
+        "--volume=${localWorkspaceFolder}:/workspaces/${localWorkspaceFolderBasename}:Z"
+    ],
+    "postCreateCommand": "npm i"
+}
