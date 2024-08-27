@@ -16,7 +16,7 @@
     "express": "^4.17.1",
     "html-webpack-plugin": "^4.2.0",
     "js-combinatorics": "^0.5.5",
-    "mocha": "^7.1.2",
+    "mocha": "^10.6.0",
     "pnp-webpack-plugin": "^1.6.4",
     "prettier": "^2.0.5",
     "react": "^16.13.1",
